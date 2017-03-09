@@ -15,7 +15,7 @@
         <td><%= game.date_played %></td>
         <td><%= game.opponent.email %></td>
         <td><%= game.player_score %> - <%= game.opponent_score %></td>
-        <td>W-L</td>
+        <td><%= game.outcome_for(current_user) %></td>
       </tr>
     <% end %>
   </tbody>
