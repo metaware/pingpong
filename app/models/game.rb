@@ -13,4 +13,8 @@ class Game < ActiveRecord::Base
     errors.add(:base, "A game against self cannot be logged") if opponent == player
   end
 
+  def outcome_for
+    # TODO
+  end
+
 end
