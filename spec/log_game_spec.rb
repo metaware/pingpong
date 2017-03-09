@@ -55,7 +55,25 @@ describe LogGame do
           player_score: 22,
           player: player,
           opponent_score: 19,
-          opponent: player
+          opponent: opponent
+        }
+      end
+
+      it "should not allow such a game to be logged" do
+        expect(response.failure?).to eq(true)
+      end
+
+    end
+
+    context 'cannot log a game without opponent' do
+
+      let(:game_params) do
+        {
+          date_played: Date.today,
+          player_score: 22,
+          player: player,
+          opponent_score: 19,
+          opponent: nil
         }
       end
 

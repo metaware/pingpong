@@ -5,6 +5,7 @@ class Game < ActiveRecord::Base
 
   validates :player_score, numericality: { less_than_or_equal_to: 21 }
   validates :opponent_score, numericality: { less_than_or_equal_to: 21 }
+  validates :opponent, presence: true
 
   validate :game_against_self
 

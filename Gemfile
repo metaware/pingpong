@@ -10,6 +10,8 @@ gem 'turbolinks',   '~> 2.5.3'
 
 gem 'devise',       '~> 3.5.2'
 gem 'devise-bootstrap-views', '~> 0.0.6'
+gem 'bootstrap-datepicker-rails'
+gem 'simple_form'
 
 gem 'interactor'
 gem 'pry'

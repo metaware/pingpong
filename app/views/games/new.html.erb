@@ -1,0 +1,12 @@
+<h1 class='page-header'>Log Game</h1>
+
+<%= simple_form_for(@game, html: { class: 'form-horizontal' }) do |f| %>
+  <%= f.input :date_played %>
+  <div class="form-group">
+    <label>Opponent</label>
+    <%= f.select :opponent_id, User.all.map { |u| [u.email, u.id] }, prompt: true %>
+  </div>
+  <%= f.input :player_score %>
+  <%= f.input :opponent_score %>
+  <%= f.button :submit, "Log Game" %>
+<% end %>
