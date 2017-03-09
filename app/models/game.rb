@@ -18,11 +18,11 @@ class Game < ActiveRecord::Base
   end
 
   def player_scored_more?
-    player_score > opponent_score
+    player_score > opponent_score && two_point_margin?
   end
 
   def opponent_scored_more?
-    opponent_score > player_score
+    opponent_score > player_score && two_point_margin?
   end
 
   def winner
