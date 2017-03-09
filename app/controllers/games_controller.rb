@@ -8,11 +8,12 @@ class GamesController < ApplicationController
     result = LogGame.call({ user: current_user, game_params: game_params})
     if result.success?
       flash[:notice] = "Game logged successfully!"
+      redirect_to :back
     else
       flash[:error] = result.error
       @game = result.game
+      render 'new'
     end
-    redirect_to :back
   end
 
   protected

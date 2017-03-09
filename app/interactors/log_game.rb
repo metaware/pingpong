@@ -7,12 +7,10 @@ class LogGame
   end
 
   def call
-    game = context.user.games.build(context.game_params)
-    if game.valid?
-      game.save
-      context.game = game
+    context.game = context.user.games.build(context.game_params)
+    if context.game.valid?
+      context.game.save
     else
-      context.game = game
       context.fail!(error: 'Invalid Game Submission')
     end
   end
