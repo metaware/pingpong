@@ -13,7 +13,9 @@ gem 'devise-bootstrap-views', '~> 0.0.6'
 gem 'bootstrap-datepicker-rails'
 gem 'simple_form'
 
+gem 'elo'
 gem 'interactor'
+
 gem 'pry'
 
 group :development, :test do
