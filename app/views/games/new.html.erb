@@ -28,7 +28,7 @@
   <%= f.input :date_played %>
   <div class="form-group">
     <label>Opponent</label>
-    <%= f.select :opponent_id, User.all.map { |u| [u.email, u.id] }, prompt: true %>
+    <%= f.select :opponent_id, @possible_opponents.map { |u| [u.email, u.id] }, prompt: true %>
   </div>
   <%= f.input :player_score %>
   <%= f.input :opponent_score %>

@@ -6,7 +6,7 @@ class HomeController < ApplicationController
   end
 
   def history
-    @games = current_user.games.includes(:player, :opponent)
+    @games = current_user.games.includes(:player, :opponent).order('id DESC')
   end
 
   def log

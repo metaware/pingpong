@@ -2,6 +2,7 @@ class GamesController < ApplicationController
 
   def new
     @game = Game.new
+    @possible_opponents = User.where.not(id: current_user)
   end
 
   def create
